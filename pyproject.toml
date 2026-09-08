@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ask-llm-mcp"
+version = "0.5.0"
+description = "A minimal MCP server for raw, cheap text-in/text-out LLM calls via the Devin/Windsurf backend"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "agentming" }]
+keywords = ["mcp", "llm", "devin", "windsurf", "model-context-protocol"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = ["requests>=2.28"]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0"]
+
+[project.scripts]
+ask-llm-mcp = "server:main"
+
+[project.urls]
+Homepage = "https://github.com/agentming/ask-llm-mcp"
+Issues = "https://github.com/agentming/ask-llm-mcp/issues"
+
+[tool.setuptools]
+py-modules = ["server", "devin_api"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

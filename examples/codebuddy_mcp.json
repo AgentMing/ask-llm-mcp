@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "ask-llm": {
+      "command": "python3",
+      "args": ["/absolute/path/to/ask-llm-mcp/server.py"],
+      "env": {
+        "DEVIN_MODEL": "swe-1-7",
+        "ASK_LLM_DATA_DIR": "/absolute/path/to/data/dir"
+      }
+    }
+  }
+}
